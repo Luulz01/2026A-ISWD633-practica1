@@ -69,8 +69,8 @@ Se presentan los comandos que se utilizaron a lo largo de esta práctica.
 
 **Aplicados para mapeo de puertos**
 
-- **docker run -d -p `<host>`:`<contenedor>` `<imagen>`:**  
-  Permite acceder a un servicio del contenedor desde el host.
+- **docker run -d --name `<nombre contenedor>` -p `<puerto host>:<puerto contenedor>` `<nombre imagen>:<tag>`**
+  Permite asignar puertos al contenedor para poder mapearlo.
 
 - **docker run -d -p `<host1>`:`<cont1>` -p `<host2>`:`<cont2>` `<imagen>`:**  
   Mapea múltiples puertos.

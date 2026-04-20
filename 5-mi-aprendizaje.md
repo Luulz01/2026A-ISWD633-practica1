@@ -69,10 +69,22 @@ Se presentan los comandos que se utilizaron a lo largo de esta práctica.
 
 **Aplicados para mapeo de puertos**
 
-- **docker run -d --name `<nombre contenedor>` -p `<puerto host>:<puerto contenedor>` `<nombre imagen>:<tag>`**
+- **docker run -d --name `<nombre contenedor>` -p `<puerto host>:<puerto contenedor>` `<nombre imagen>:<tag>` :**
+
   Permite asignar puertos al contenedor para poder mapearlo.
 
-- **docker run -d -p `<host1>`:`<cont1>` -p `<host2>`:`<cont2>` `<imagen>`:**  
-  Mapea múltiples puertos.
+- **docker run -P -d --name `<nombre contenedor>` `<nombre imagen>:<tag>` :**
+  
+  Le indica a Docker que asigne automáticamente puertos aleatorios en tu host para todos los puertos expuestos por el contenedor.
 
+### Cosas que realicé y aprendí
+- Mediante el comando docker pull, descargué imágenes como hello-world y nginx, comprendiendo además el uso de etiquetas (tags) para definir versiones específicas.
+- También entendí que los identificadores de las imágenes se generan mediante algoritmos hash como SHA-256, lo que garantiza que cada imagen sea única.
+- Aprendí que se puede asignar un nombre a un contenedor o dejar que Docker genere uno automáticamente.
+- Observé que cuando se ejecuta sin la opción -d, la terminal queda ocupada, mientras que al usar el modo detach puedo seguir trabajando normalmente.
+- En cuanto al mapeo de puertos, comprendí cómo conectar los servicios de un contenedor con mi máquina local utilizando la opción -p.
+- Ejecuté comandos como ls -l, whoami y echo, y acceder a archivos internos como la contraseña inicial de Jenkins.
 
+### Conclusión
+
+Finalmente, durante toda la práctica reforcé mi aprendizaje mediante la evidencia visual, colocando capturas de pantalla en cada paso realizado. Estas capturas me ayudaron a verificar que los comandos se ejecutaron correctamente. En conclusión, esta práctica me permitió comprender qué es Docker, cómo funcionan las imágenes y los contenedores, y la importancia para la creación de entornos aislados, portables y eficientes.
